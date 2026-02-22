@@ -25,7 +25,7 @@ def main():
     
     # Left: Baseline
     ax1.set_title("Reproduction: Baseline (H=5)", fontsize=15, fontweight='bold')
-    plot_data(ax1, "baseline_reproduction", "Baseline (H=5)", "blue", "-")
+    plot_data(ax1, "ablation_horizon_5", "Baseline (H=5)", "blue", "-")
     # The Original Paper's reported score as a reference line
     ax1.axhline(y=875, color='gray', linestyle='--', linewidth=2, label='Original Paper (Reported Max)')
     ax1.set_xlabel("Environment Steps", fontsize=13)
@@ -37,7 +37,7 @@ def main():
     ax2.set_title("Ablation Study: Planning Horizon", fontsize=15, fontweight='bold')
     plot_data(ax2, "ablation_horizon_1", "H=1", "red", "--")
     plot_data(ax2, "ablation_horizon_3", "H=3", "orange", "-.")
-    plot_data(ax2, "baseline_reproduction", "H=5 (Baseline)", "blue", "-")
+    plot_data(ax2, "ablation_horizon_5", "H=5 (Baseline)", "blue", "-")
     plot_data(ax2, "ablation_horizon_7", "H=7", "purple", ":")
     ax2.set_xlabel("Environment Steps", fontsize=13)
     ax2.grid(True, linestyle=':', alpha=0.7)
